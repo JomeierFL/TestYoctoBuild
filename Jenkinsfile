@@ -15,6 +15,7 @@ pipeline {
   post{
     always{
       echo "Hello From Post!"
+      sh "./failureAdjust.sh"
       archiveArtifacts artifacts: 'response.html'  
     }
   }
