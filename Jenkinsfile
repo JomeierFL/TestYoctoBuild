@@ -14,7 +14,7 @@ pipeline {
   }
   post{
     always{
-      echo "Hello From Post!
+      echo "Hello From Post!"
     }
   }
 }
