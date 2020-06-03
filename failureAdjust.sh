@@ -1,1 +1,1 @@
-sed -i 's/Build erfolgreich/Build Fehlgeschlagen/g' response.html
+sed -i 's/Build Fehlgeschlagen/Build Fehlgeschlagen, Konfiguration ok/g' response.html
