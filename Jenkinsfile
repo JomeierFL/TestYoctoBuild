@@ -18,7 +18,7 @@ pipeline {
       emailtext(
         subject: "Email From Build!",
         body: "Hi There",
-        to: "jonas.meier@ergon.ch"
+        to: "jonas.meier@ergon.ch",
         from "HeyItsMe@jenkins"
       )        
     }
