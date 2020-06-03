@@ -15,6 +15,7 @@ pipeline {
   }
   post{
     always{
+      echo params.branch_NAME
       script{
         if(params.branch_NAME == 'master'){
           echo "Hello From master!"
