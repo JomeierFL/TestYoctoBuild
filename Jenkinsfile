@@ -8,6 +8,7 @@ pipeline {
     
       steps{
          echo "Hello from: $WORKSPACE"
+         sh "./script.sh"
       }
     }
   }
