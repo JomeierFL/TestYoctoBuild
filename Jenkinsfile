@@ -15,12 +15,7 @@ pipeline {
   post{
     always{
       echo "Hello From Post!"
-      emailtext(
-        subject: "Email From Build!",
-        body: "Hi There",
-        to: "jonas.meier@ergon.ch",
-        from: "HeyItsMe@jenkins"
-      )        
+      archiveArtifacts artifacts: response.html  
     }
   }
 }
