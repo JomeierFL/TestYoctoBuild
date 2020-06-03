@@ -15,9 +15,8 @@ pipeline {
   }
   post{
     always{
-      echo params.branch_NAME
       script{
-        if(params.branch_NAME == 'master'){
+        if(1 == 1){
           echo "Hello From master!"
           sh "./failureAdjust.sh"
           archiveArtifacts artifacts: 'response.html'
