@@ -15,7 +15,7 @@ pipeline {
   post{
     always{
       echo "Hello From Post!"
-      archiveArtifacts artifacts: response.html  
+      archiveArtifacts artifacts: 'response.html'  
     }
   }
 }
