@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+      body {
+        font-family: 'Roboto Mono', monospace;
+        font-weight: 100;
+        padding: 40px;
+      }
+
+      h1 {
+        font-weight: 400;
+        color: black;
+        font-family: 'Roboto Mono', monospace;
+      }
+
+      .VALID {
+        color: #549058;
+      }
+
+      .INVALID {
+        color: #bf3232;
+      }
+
+      .MISSING {
+        color: #e3831f;
+      }
+
+      .REQUIRED_CHAR {
+        color: black;
+      }
+    </style>
+</head>
+<body>
+<h1>Build erfolgreich</h1>
+<h2>Konfiguration:</h2>
+<table>
+    <tr class="VALID"><td>Mail<mark class="REQUIRED_CHAR"></mark>:</td><td>jonas.meier@ergon.ch</td></tr>
+    <tr class="VALID"><td>Machine<mark class="REQUIRED_CHAR">*</mark>:</td><td>oc-imx6ul-1</td></tr>
+    <tr class="VALID"><td>Version<mark class="REQUIRED_CHAR">*</mark>:</td><td>4.6.0</td></tr>
+    <tr class="MISSING"><td>Rauc-Precondition<mark class="REQUIRED_CHAR"></mark>:</td><td>Es wurde keine (optionale) Rauc-Precondition angegeben...
+(An optional expression checked by the SL-Core before installing a rauc update.
+If it does not evaluate to 'true' the update will not be installed.)
+Expression := Literal | Dadref | ( Expression Op Expression ) | !Expression
+Literal := "<freetext>"
+Dadref := dad:<mpmodelid>
+Op := <operator><type>
+
+Example: ( dad:20040 >=Version "3.15.0" )
+Meaning "datapoint with MpModelId 20040 (CSP version string) at least 3.15.0 when compared as Versions"</td></tr>
+</table>
+<h3>Legende:</h3>
+<p class="VALID">Wert gültig</p>
+<p class="INVALID">Wert ungültig</p>
+<p class="MISSING">Wert fehlend</p>
+<mark>* - Pflicht-Wert (Ein gültiger Wert wird benötigt um den Build auszuführen)</mark>
+</body>
+</html>
