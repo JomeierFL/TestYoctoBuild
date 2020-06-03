@@ -7,7 +7,7 @@ pipeline {
     stage("build") {
     
       steps{
-        echo $WORKSPACE
+        sh "echo $WORKSPACE"
       }
     }
   }
